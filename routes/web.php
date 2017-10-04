@@ -20,3 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('file', 'FileUploadController@index')->name('file.form');
 Route::post('upload', 'FileUploadController@upload')->name('file.upload');
+
+Route::get('customers/data', 'CustomerController@getData')->name('customers.data');
+Route::resource('customers', 'CustomerController');
